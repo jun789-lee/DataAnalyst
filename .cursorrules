@@ -41,18 +41,60 @@ When initializing a new project:
 - Include documentation files at appropriate locations
 - Maintain consistent naming conventions
 
+## Python Environment Management
+
+### Dependency Management
+1. **Always create and maintain requirements.txt**
+   - List all project dependencies with version numbers
+   - Update whenever new packages are installed
+   - Use `pip freeze > requirements.txt` to capture current environment
+   
+2. **Check for Missing Dependencies**
+   - Before running Python scripts, verify all required packages are installed
+   - If `ModuleNotFoundError` occurs, install the package immediately
+   - Document the installation in requirements.txt
+
+3. **Installation Best Practices**
+   - Use `pip3 install <package>` for Python 3
+   - Install multiple related packages together: `pip3 install pandas numpy matplotlib jupyter`
+   - Consider using virtual environments for project isolation
+   - Keep track of package versions for reproducibility
+
+### Common Python Packages for Data Analysis
+Essential packages that should be in requirements.txt:
+- **pandas**: Data manipulation and analysis
+- **numpy**: Numerical computing
+- **matplotlib**: Data visualization
+- **jupyter**: Interactive notebooks
+- **seaborn**: Statistical visualization (optional)
+- **scikit-learn**: Machine learning (optional)
+
+### Error Prevention
+- **Before executing Python code**: Ensure environment is properly set up
+- **When creating new notebooks**: Verify kernel has access to required packages
+- **After fresh clone**: Run `pip3 install -r requirements.txt` first
+- **Document Python version**: Include Python version requirements in README
+
+### Jupyter Notebook Setup
+1. Ensure Jupyter is installed: `pip3 install jupyter jupyterlab`
+2. Install ipykernel for notebook support: `pip3 install ipykernel`
+3. Verify kernel installation: `jupyter kernelspec list`
+4. Add PATH if needed: `export PATH="$HOME/Library/Python/3.9/bin:$PATH"`
+
 ## Code Quality and Maintenance
 
 ### Before Making Changes
 - Understand the current state of the repository
 - Check for existing patterns and conventions
 - Review recent changes and commit history
+- **Verify Python environment and dependencies are installed**
 
 ### When Creating Files
 - Use appropriate file extensions and naming
 - Include necessary headers and documentation
 - Follow language-specific best practices
 - Ensure files are added to git tracking
+- **For Python files: Add import statements and verify packages are available**
 
 ## Communication Standards
 
