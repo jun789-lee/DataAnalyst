@@ -5,6 +5,39 @@
 - This is the default and primary language for all interactions
 - Korean responses should be natural, professional, and contextually appropriate
 
+## Report Writing Standards
+
+### Document Style Guide
+- **Detailed guidelines**: See `.cursorrules_report_writing` for comprehensive report writing standards
+- **ALWAYS use nominal endings (명사형 종결)** in reports and formal documents
+  - Use "제안" instead of "제안합니다"
+  - Use "필요" instead of "필요합니다"
+  - Use "가능" instead of "가능합니다"
+
+### Report Structure
+All reports, proposals, and analysis documents must follow this structure:
+1. **요약 (Summary)**: 2-4 sentences, nominal endings
+2. **배경 및 현황 분석 (Background & Analysis)**: Context and current situation
+3. **본문 (Main Content)**: Problem, analysis, findings
+4. **제안/권고사항 (Recommendations)**: Specific, actionable proposals
+5. **결론 (Conclusion)**: Key takeaways and expected outcomes
+6. **다음 단계 (Next Steps)**: Implementation plan
+7. **메타데이터 (Metadata)**: Date, author, version
+
+### Formatting Requirements
+- Use **bold** for key terms and metrics
+- Use bullet points for lists
+- Use numbered lists for sequential steps
+- Include horizontal rules (`---`) between major sections
+- Add metadata at document end
+
+### Quality Standards
+- Support all claims with data or logic
+- Use industry-standard terminology consistently
+- Maintain objective and professional tone
+- Ensure logical flow from problem to solution
+- Include specific, actionable recommendations
+
 ## Git and Version Control Best Practices
 
 ### Pre-commit Checks

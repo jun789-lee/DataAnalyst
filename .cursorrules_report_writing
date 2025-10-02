@@ -1,0 +1,344 @@
+# Report Writing Style Guide for DataAnalyst Project
+
+## Purpose
+This style guide ensures consistency and professionalism in all reports, proposals, and documentation created within the DataAnalyst project.
+
+---
+
+## 1. Writing Style Fundamentals
+
+### 1.1 Sentence Ending Style: Nominal Form (명사형 종결)
+
+**ALWAYS use nominal endings (명사형) instead of polite/formal endings (합니다체/습니다체)**
+
+#### ✅ Correct Examples:
+- "분석 결과 제시" (NOT "분석 결과를 제시합니다")
+- "개선 방안 도출" (NOT "개선 방안을 도출했습니다")
+- "데이터 검증 필요" (NOT "데이터 검증이 필요합니다")
+- "다음 단계 권장" (NOT "다음 단계를 권장합니다")
+- "전략 제안" (NOT "전략을 제안합니다")
+
+#### ❌ Avoid:
+- ~합니다, ~됩니다, ~습니다, ~입니다 (at the end of main sentences)
+- ~할 수 있습니다 → use "가능" instead
+- ~해야 합니다 → use "필요" instead
+- ~권장합니다 → use "권장" instead
+
+#### Exceptions:
+- Questions in headers: "어떻게 개선할 수 있는가?"
+- Direct quotes or dialogue
+- Executive summary when specifically requested in formal tone
+
+### 1.2 Tone and Voice
+
+- **Objective and Professional**: Avoid personal opinions unless explicitly labeled
+- **Concise**: Remove unnecessary words and redundancy
+- **Assertive**: Use confident language backed by data
+- **Neutral**: Avoid emotional or subjective language
+
+---
+
+## 2. Document Structure
+
+### 2.1 Standard Report Structure
+
+All reports should follow this logical flow:
+
+```
+1. Title
+2. Summary (요약)
+3. Background & Current Analysis (배경 및 현황 분석)
+4. Main Content (본문)
+   - Problem Statement
+   - Analysis
+   - Findings
+5. Recommendations/Proposals (제안/권고사항)
+6. Conclusion (결론)
+7. Next Steps (향후 계획/다음 단계)
+8. Metadata (작성일, 작성자, 버전)
+```
+
+### 2.2 Section Hierarchy
+
+Use consistent heading levels:
+- `#` : Document Title
+- `##` : Major Sections (요약, 배경, 제안, 결론)
+- `###` : Subsections
+- `####` : Detailed points
+
+### 2.3 Numbering System
+
+Use consistent numbering:
+```markdown
+## 1. First Major Section
+### 1.1 First Subsection
+#### 1.1.1 Detailed Point (optional)
+
+## 2. Second Major Section
+### 2.1 First Subsection
+```
+
+---
+
+## 3. Content Guidelines
+
+### 3.1 Summary Section (요약)
+
+- **Length**: 2-4 sentences maximum
+- **Content**: 
+  - Purpose of document
+  - Key findings or proposals
+  - Expected outcome
+- **Style**: Nominal endings, highly condensed
+
+**Example**:
+```markdown
+## 📋 요약
+
+본 보고서는 [프로젝트명]의 [목적] 제시. 
+현재 [현황]에서 [문제점] 해결을 위한 [방안] 제안.
+```
+
+### 3.2 Background & Analysis (배경 및 현황 분석)
+
+- **Start with context**: What is the current situation?
+- **Identify problems**: What are the limitations or issues?
+- **Use data**: Support claims with metrics and statistics
+- **Be specific**: Avoid vague statements
+
+### 3.3 Proposals/Recommendations (제안)
+
+**Structure each proposal with:**
+1. **Title**: Clear, action-oriented
+2. **제안 내용**: What exactly is being proposed
+3. **구성 요소**: Component breakdown
+4. **기대 효과**: Expected benefits
+5. **전략적 가치**: Strategic value (when applicable)
+
+**Example**:
+```markdown
+### 2.1 [Proposal Title]
+
+#### 제안 내용
+[Specific proposal in nominal form]
+
+#### 구성 요소
+- Component A
+- Component B
+- Component C
+
+#### 기대 효과
+1. **[Benefit 1]**: Description
+2. **[Benefit 2]**: Description
+```
+
+### 3.4 Data Presentation
+
+- **Use tables** for comparative data
+- **Use bullet points** for lists of 3+ items
+- **Use numbered lists** for sequential steps or rankings
+- **Include metrics**: Percentages, counts, ratios
+- **Cite sources**: When using external data
+
+---
+
+## 4. Formatting Best Practices
+
+### 4.1 Visual Elements
+
+**Bold** for emphasis:
+- Key terms on first mention
+- Important metrics
+- Section highlights
+
+**Code blocks** for:
+- Data structures
+- Process flows
+- Technical specifications
+
+**Horizontal rules** (`---`):
+- Between major sections
+- Before metadata section
+
+### 4.2 Lists and Bullets
+
+**Use bullets** when:
+- Order doesn't matter
+- Listing features or characteristics
+- Presenting multiple options
+
+**Use numbers** when:
+- Sequential steps required
+- Priority or ranking implied
+- Referencing specific items later
+
+### 4.3 Emphasis Hierarchy
+
+```markdown
+- **Primary emphasis**: Bold for key concepts
+- *Secondary emphasis*: Italics for supporting points (use sparingly)
+- `Technical terms`: Code formatting for technical elements
+```
+
+---
+
+## 5. Language Conventions
+
+### 5.1 Terminology Consistency
+
+**Use standard industry terms (Korean-English)**:
+- Retention → 리텐션 (not 유지율)
+- Engagement → 인게이지먼트 (not 참여도)
+- Churn Rate → 이탈률
+- User Acquisition → 유저 획득
+- Monetization → 수익화
+- KPI → KPI (not 핵심성과지표)
+- A/B Test → A/B 테스트
+
+### 5.2 Data and Metrics
+
+**Format consistently**:
+- Percentages: "32.18%" (not "32.18 %")
+- Large numbers: "2,638" (use comma separators)
+- Ranges: "10~20명" or "10-20명"
+- Dates: "2025년 10월 2일" or "2025-10-02"
+
+### 5.3 Common Phrases
+
+| Instead of | Use |
+|------------|-----|
+| ~할 수 있습니다 | 가능 |
+| ~해야 합니다 | 필요 |
+| ~것으로 판단됩니다 | ~것으로 판단 |
+| ~제안합니다 | 제안 |
+| ~권장합니다 | 권장 |
+| ~예상됩니다 | 예상 |
+| ~보입니다 | ~로 보임 or ~로 나타남 |
+
+---
+
+## 6. Specific Document Types
+
+### 6.1 Analysis Reports (분석 보고서)
+
+Required sections:
+1. 분석 목적
+2. 데이터 범위
+3. 분석 방법론
+4. 주요 발견사항
+5. 인사이트
+6. 권고사항
+
+### 6.2 Proposal Documents (제안서)
+
+Required sections:
+1. 제안 배경
+2. 현황 분석
+3. 개선 제안
+4. 기대 효과
+5. 실행 계획
+6. 리스크 및 대응방안
+
+### 6.3 Progress Reports (진행 보고서)
+
+Required sections:
+1. 기간 및 범위
+2. 완료 항목
+3. 진행 중 항목
+4. 이슈 및 해결방안
+5. 다음 단계
+
+---
+
+## 7. Quality Checklist
+
+Before finalizing any report, verify:
+
+### Content
+- [ ] Summary clearly states purpose and key points
+- [ ] All claims supported by data or logic
+- [ ] Terminology used consistently
+- [ ] No vague or ambiguous statements
+- [ ] Recommendations are specific and actionable
+
+### Structure
+- [ ] Logical flow from background to conclusion
+- [ ] Consistent heading hierarchy
+- [ ] Appropriate use of lists and tables
+- [ ] Visual elements enhance readability
+
+### Style
+- [ ] Nominal endings used consistently
+- [ ] Professional and objective tone maintained
+- [ ] No informal language or colloquialisms
+- [ ] Sentences are concise and clear
+
+### Formatting
+- [ ] Consistent spacing and indentation
+- [ ] Bold/italics used appropriately
+- [ ] Horizontal rules separate major sections
+- [ ] Metadata included at bottom
+
+---
+
+## 8. Examples
+
+### Example 1: Problem Statement
+❌ **Poor**: "문제가 있는 것 같습니다"  
+✅ **Good**: "다음과 같은 문제점 존재:"
+
+### Example 2: Recommendation
+❌ **Poor**: "이렇게 하면 좋을 것 같습니다"  
+✅ **Good**: "다음 방안 제안:"
+
+### Example 3: Data Presentation
+❌ **Poor**: "삭제율이 높습니다"  
+✅ **Good**: "Day 1 삭제율 45.77%로 벤치마크 대비 13.59%p 높음"
+
+### Example 4: Conclusion
+❌ **Poor**: "앞으로 이런 방향으로 개선하면 될 것 같습니다"  
+✅ **Good**: "3단계 구조 개편을 통한 리텐션 향상 기대"
+
+---
+
+## 9. Common Mistakes to Avoid
+
+### 9.1 Style Mistakes
+- ❌ Mixing nominal and polite endings in the same document
+- ❌ Using first-person perspective ("나는", "우리는")
+- ❌ Casual language ("뭐", "약간", "그냥")
+- ❌ Uncertain expressions ("~것 같음", "아마도")
+
+### 9.2 Structure Mistakes
+- ❌ Starting with detailed content before context
+- ❌ Missing summary section
+- ❌ No clear conclusion or next steps
+- ❌ Inconsistent heading levels
+
+### 9.3 Content Mistakes
+- ❌ Opinions without data backing
+- ❌ Vague recommendations
+- ❌ Missing expected outcomes
+- ❌ No consideration of implementation
+
+---
+
+## 10. AI Assistant Guidelines
+
+When creating or editing reports:
+
+1. **ALWAYS detect document type** (analysis, proposal, progress report)
+2. **APPLY appropriate structure** based on document type
+3. **USE nominal endings** consistently throughout
+4. **ENSURE logical flow** from problem to solution
+5. **INCLUDE metrics and data** to support claims
+6. **FORMAT consistently** with visual hierarchy
+7. **ADD metadata** at the end (date, author, version)
+8. **VERIFY checklist** before presenting to user
+
+---
+
+**Document Version**: 1.0  
+**Last Updated**: 2025-10-02  
+**Maintained by**: DataAnalyst Team
+
