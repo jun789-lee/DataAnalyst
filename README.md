@@ -19,22 +19,42 @@ git clone https://github.com/jun789-lee/DataAnalyst.git
 cd DataAnalyst
 ```
 
-### 2. Python 패키지 설치
+### 2. 가상 환경 생성 (권장)
 ```bash
-# 모든 필요한 패키지 설치
-pip3 install -r requirements.txt
+# 가상 환경 생성
+python3 -m venv .venv
+
+# 가상 환경 활성화
+source .venv/bin/activate  # macOS/Linux
+# 또는
+.venv\Scripts\activate  # Windows
 ```
 
-또는 개별 설치:
+### 3. Python 패키지 설치
 ```bash
-pip3 install pandas numpy matplotlib jupyter
+# 가상 환경이 활성화된 상태에서 실행
+pip install -r requirements.txt
 ```
 
-### 3. Jupyter Notebook 실행
+### 4. Jupyter 커널 등록
+```bash
+# Jupyter가 가상 환경의 패키지를 인식할 수 있도록 커널 등록
+python -m ipykernel install --user --name=dataanalyst --display-name="Python (DataAnalyst)"
+```
+
+### 5. Jupyter Notebook 실행
 ```bash
 jupyter notebook
 # 또는
 jupyter lab
+```
+
+**중요**: Jupyter 노트북을 열면 오른쪽 상단에서 **"Python (DataAnalyst)"** 커널을 선택하세요!
+
+### 가상 환경 비활성화
+작업을 마친 후:
+```bash
+deactivate
 ```
 
 ## 포함된 라이브러리

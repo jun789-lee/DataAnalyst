@@ -43,21 +43,41 @@ When initializing a new project:
 
 ## Python Environment Management
 
+### Virtual Environment Best Practices
+1. **ALWAYS detect and use virtual environments when present**
+   - Check for `.venv`, `venv`, or `env` directories in the project root
+   - If virtual environment exists, ALWAYS activate it before installing packages
+   - Use `source .venv/bin/activate` (macOS/Linux) or `.venv\Scripts\activate` (Windows)
+   
+2. **Virtual Environment vs Global Installation**
+   - **Virtual environments are ISOLATED**: Packages installed globally are NOT available in venv
+   - **Always install packages IN the virtual environment** if one exists
+   - Command pattern: `source .venv/bin/activate && pip install <package>`
+   
+3. **Creating Virtual Environments**
+   - For new projects: `python3 -m venv .venv`
+   - Add `.venv/` to `.gitignore` to exclude from version control
+   - Document venv usage in README.md
+
 ### Dependency Management
 1. **Always create and maintain requirements.txt**
    - List all project dependencies with version numbers
    - Update whenever new packages are installed
    - Use `pip freeze > requirements.txt` to capture current environment
+   - **IMPORTANT**: Run this command INSIDE the activated virtual environment
    
 2. **Check for Missing Dependencies**
    - Before running Python scripts, verify all required packages are installed
-   - If `ModuleNotFoundError` occurs, install the package immediately
-   - Document the installation in requirements.txt
+   - If `ModuleNotFoundError` occurs:
+     a. Check if virtual environment is activated
+     b. Install the package in the CORRECT environment
+     c. Document the installation in requirements.txt
 
 3. **Installation Best Practices**
-   - Use `pip3 install <package>` for Python 3
-   - Install multiple related packages together: `pip3 install pandas numpy matplotlib jupyter`
-   - Consider using virtual environments for project isolation
+   - **Step 1**: Check if virtual environment exists and activate it
+   - **Step 2**: Install packages: `pip install <package>`
+   - **Step 3**: Update requirements.txt: `pip freeze > requirements.txt`
+   - Install multiple related packages together: `pip install pandas numpy matplotlib jupyter`
    - Keep track of package versions for reproducibility
 
 ### Common Python Packages for Data Analysis
@@ -66,20 +86,72 @@ Essential packages that should be in requirements.txt:
 - **numpy**: Numerical computing
 - **matplotlib**: Data visualization
 - **jupyter**: Interactive notebooks
+- **jupyterlab**: Modern Jupyter interface
+- **ipykernel**: Jupyter kernel support
 - **seaborn**: Statistical visualization (optional)
 - **scikit-learn**: Machine learning (optional)
 
-### Error Prevention
-- **Before executing Python code**: Ensure environment is properly set up
-- **When creating new notebooks**: Verify kernel has access to required packages
-- **After fresh clone**: Run `pip3 install -r requirements.txt` first
-- **Document Python version**: Include Python version requirements in README
+### Jupyter Notebook with Virtual Environments
+**CRITICAL**: Jupyter notebooks require special setup with virtual environments
 
-### Jupyter Notebook Setup
-1. Ensure Jupyter is installed: `pip3 install jupyter jupyterlab`
-2. Install ipykernel for notebook support: `pip3 install ipykernel`
-3. Verify kernel installation: `jupyter kernelspec list`
-4. Add PATH if needed: `export PATH="$HOME/Library/Python/3.9/bin:$PATH"`
+1. **Install Jupyter in the virtual environment**
+   ```bash
+   source .venv/bin/activate
+   pip install jupyter jupyterlab ipykernel
+   ```
+
+2. **Register virtual environment as Jupyter kernel**
+   ```bash
+   source .venv/bin/activate
+   python -m ipykernel install --user --name=<project-name> --display-name="Python (<Project>)"
+   ```
+
+3. **Verify kernel installation**
+   ```bash
+   jupyter kernelspec list
+   ```
+
+4. **In Jupyter Notebook: ALWAYS select the correct kernel**
+   - Click kernel selector (top right in notebook)
+   - Choose the kernel matching your virtual environment
+   - **Common mistake**: Using default Python3 kernel instead of project-specific kernel
+
+5. **Troubleshooting ModuleNotFoundError in Notebooks**
+   - Problem: Packages installed but notebook can't find them
+   - Cause: Notebook is using wrong kernel (not the venv kernel)
+   - Solution: Change kernel to virtual environment kernel OR install in notebook cell with `!pip install <package>`
+
+### Error Prevention
+- **Before executing Python code**: 
+  1. Check if virtual environment exists
+  2. Activate virtual environment if present
+  3. Verify required packages are installed IN that environment
+- **When creating new notebooks**: 
+  1. Verify kernel matches the virtual environment
+  2. Check kernel has access to required packages
+  3. Test imports in first cell before proceeding
+- **After fresh clone**: 
+  1. Create virtual environment: `python3 -m venv .venv`
+  2. Activate it: `source .venv/bin/activate`
+  3. Install dependencies: `pip install -r requirements.txt`
+  4. Register Jupyter kernel if using notebooks
+- **Document Python version**: Include Python version requirements in README
+- **Add PATH if needed**: `export PATH="$HOME/Library/Python/3.9/bin:$PATH"`
+
+### Quick Environment Check Commands
+```bash
+# Check which Python is being used
+which python
+
+# Check if virtual environment is activated (should show .venv path)
+echo $VIRTUAL_ENV
+
+# List installed packages in current environment
+pip list
+
+# Verify specific package installation
+pip show pandas
+```
 
 ## Code Quality and Maintenance
 
