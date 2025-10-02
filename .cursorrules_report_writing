@@ -38,9 +38,150 @@ This style guide ensures consistency and professionalism in all reports, proposa
 
 ---
 
-## 2. Document Structure
+## 2. Report Compactness and Impact
 
-### 2.1 Standard Report Structure
+### 2.1 Executive-Friendly Principle
+
+**CRITICAL**: Decision-makers need quick, impactful insights, not lengthy explanations.
+
+**Target Reading Time**:
+- Executive Summary: **30 seconds**
+- Full Report: **3-5 minutes maximum**
+- Detailed Technical Report: **10 minutes maximum**
+
+### 2.2 Compression Strategies
+
+#### Remove These Elements:
+- ❌ Lengthy background explanations already known to stakeholders
+- ❌ Overly detailed theoretical frameworks
+- ❌ Redundant information across sections
+- ❌ Exhaustive enumeration of obvious points
+- ❌ Excessive context that doesn't add value
+- ❌ Long paragraphs (break into 3-4 sentences max)
+
+#### Keep These Elements:
+- ✅ Key insights and findings
+- ✅ Actionable recommendations
+- ✅ Critical data points and metrics
+- ✅ Clear problem → solution flow
+- ✅ Implementation timeline
+- ✅ Expected outcomes
+
+### 2.3 Impact Maximization Techniques
+
+**Use Visual Shortcuts**:
+```markdown
+Before: "첫째로... 둘째로... 셋째로..."
+After:  "① ② ③" or "1. 2. 3."
+
+Before: "A에서 B로 변화하고, 그 결과 C가 발생합니다"
+After:  "A → B → C"
+
+Before: 긴 문단으로 설명
+After:  표(table) 또는 도식(diagram) 활용
+```
+
+**Compress Sentence Structure**:
+```markdown
+Before: "현재 시스템은 A라는 문제를 가지고 있으며, 이로 인해 B가 발생하고, 
+        결과적으로 C라는 부정적 영향이 나타나고 있습니다."
+After:  "현재 A 문제로 인해 B 발생 → C 부정적 영향 존재."
+```
+
+**Use Power Words**:
+- ⚡ "핵심", "즉시", "임팩트", "급증", "급감"
+- ⚡ "치명적", "결정적", "핵심", "필수", "긴급"
+- ⚡ "3배 증가", "50% 감소" (구체적 수치)
+
+### 2.4 Page Length Guidelines
+
+| Document Type | Max Pages | Max Word Count |
+|---------------|-----------|----------------|
+| Executive Brief | 1 page | 300-500 words |
+| Standard Report | 2-3 pages | 800-1200 words |
+| Detailed Analysis | 5 pages | 2000 words |
+
+**If exceeding limits**: Move details to appendix or separate technical document.
+
+### 2.5 Information Hierarchy
+
+**Critical → Important → Supporting**
+
+```markdown
+## 1. Critical (Must Read)
+- Problem statement
+- Key recommendation
+- Expected outcome
+
+## 2. Important (Should Read)
+- Supporting data
+- Implementation steps
+- Timeline
+
+## 3. Supporting (Reference)
+- Detailed methodology
+- Additional context
+- Appendix
+```
+
+### 2.6 Quick Scan Optimization
+
+Ensure decision-makers can scan in **60 seconds** and understand:
+1. What's the problem?
+2. What's your recommendation?
+3. What's the expected impact?
+4. What's the timeline?
+
+**Techniques**:
+- **Bold key terms** in first sentence of each section
+- Use **tables** over paragraphs when comparing data
+- Add **visual breaks** (horizontal rules, whitespace)
+- Start with **action verbs** (제안, 분석, 도출, 권장)
+
+### 2.7 Before/After Example
+
+#### ❌ Before (Too Verbose - 150 words)
+```markdown
+현재 우리 시스템은 여러 가지 문제점을 안고 있습니다. 
+첫 번째로, 유사한 난이도의 스테이지가 계속해서 반복되는 구조적 한계가 있으며, 
+이로 인해 유저들이 게임을 플레이하는 동안 특별한 자극을 받지 못하는 상황입니다. 
+두 번째로, 익숙하지 않은 이미지를 콘텐츠로 사용할 경우, 유저가 퍼즐을 
+해결하는 데 필요한 인지적 단서나 근거가 부족하여 해결 과정에서 좌절감을 
+경험할 가능성이 높습니다. 세 번째로, 플레이 중에 특별한 보상이나 
+하이라이트가 되는 순간이 없어서 유저가 지속적으로 플레이할 동기 부여가 
+약한 문제가 존재합니다.
+```
+
+#### ✅ After (Compact & Impactful - 50 words)
+```markdown
+현재 Pic-Fit은 유사한 난이도의 스테이지가 계속 반복되는 구조로 인해 
+유저에게 특별한 자극을 주지 못하는 상황. 또한 익숙하지 않은 이미지 
+사용 시 퍼즐 해결 근거 부족으로 좌절감 경험 가능. 더불어 특별한 
+보상이나 하이라이트 순간 부재로 플레이 동기 부여 약한 문제 존재.
+
+**핵심 문제**:
+```
+비익숙 이미지 → 인지 단서 부족 → 좌절 → 이탈
+```
+```
+
+### 2.8 Checklist for Compact Reports
+
+Before finalizing, ask:
+- [ ] Can I read this in 3 minutes?
+- [ ] Is every sentence necessary?
+- [ ] Can any paragraph become a bullet list?
+- [ ] Can any list become a table?
+- [ ] Are there redundant explanations?
+- [ ] Did I use visual shortcuts (→, ①②③, tables)?
+- [ ] Is the problem → solution → impact flow clear?
+- [ ] Would an executive understand this at a glance?
+
+---
+
+## 3. Document Structure
+
+### 3.1 Standard Report Structure
 
 All reports should follow this logical flow:
 
@@ -58,7 +199,7 @@ All reports should follow this logical flow:
 8. Metadata (작성일, 작성자, 버전)
 ```
 
-### 2.2 Section Hierarchy
+### 3.2 Section Hierarchy
 
 Use consistent heading levels:
 - `#` : Document Title
@@ -66,7 +207,7 @@ Use consistent heading levels:
 - `###` : Subsections
 - `####` : Detailed points
 
-### 2.3 Numbering System
+### 3.3 Numbering System
 
 Use consistent numbering:
 ```markdown
