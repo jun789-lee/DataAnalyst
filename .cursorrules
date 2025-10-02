@@ -1,0 +1,103 @@
+# AI Assistant Rules for DataAnalyst Project
+
+## Primary Communication Rule
+- **ALWAYS respond in Korean (한국어)** unless explicitly asked to respond in another language
+- This is the default and primary language for all interactions
+- Korean responses should be natural, professional, and contextually appropriate
+
+## Git and Version Control Best Practices
+
+### Pre-commit Checks
+1. **Always verify git status** before attempting to push
+2. **Ensure at least one commit exists** before pushing to remote
+3. **Check remote repository state** using `git fetch` before pushing
+4. **Verify branch name** matches the remote branch (main vs master)
+
+### Git Workflow Guidelines
+- Create initial commit with meaningful files (README.md, .gitignore, etc.) before first push
+- Use `git pull --rebase origin main` to sync with remote before pushing
+- For empty repositories, ensure local commits exist before attempting push
+- Always use descriptive commit messages that explain the changes
+
+### Error Prevention
+- **Never attempt to push without local commits**: Check `git log` first
+- **Handle remote conflicts proactively**: Fetch and merge before pushing
+- **Use appropriate force push**: Only use `--force` when absolutely necessary and safe
+- **Verify authentication**: Ensure git credentials are properly configured
+
+## Project Setup Standards
+
+### Initial Repository Setup
+When initializing a new project:
+1. Create `.gitignore` file appropriate for the project type
+2. Create `README.md` with project description and setup instructions
+3. Create initial commit with these essential files
+4. Verify remote connection before first push
+5. Use `git push -u origin main` for initial push to set upstream
+
+### File Organization
+- Keep repository root clean and organized
+- Use meaningful directory structure
+- Include documentation files at appropriate locations
+- Maintain consistent naming conventions
+
+## Code Quality and Maintenance
+
+### Before Making Changes
+- Understand the current state of the repository
+- Check for existing patterns and conventions
+- Review recent changes and commit history
+
+### When Creating Files
+- Use appropriate file extensions and naming
+- Include necessary headers and documentation
+- Follow language-specific best practices
+- Ensure files are added to git tracking
+
+## Communication Standards
+
+### Response Format
+- Provide clear, actionable solutions
+- Include command examples when relevant
+- Explain WHY certain actions are recommended
+- Anticipate potential follow-up issues
+- Use Korean language naturally and professionally
+
+### Error Handling
+- Analyze errors thoroughly before suggesting solutions
+- Provide multiple solution options when applicable
+- Explain the root cause of issues
+- Include prevention strategies for future occurrences
+
+## Tool Usage Optimization
+
+### Terminal Commands
+- Verify current directory before executing commands
+- Use appropriate flags for non-interactive execution
+- Check command success/failure and handle accordingly
+- Provide context for why commands are being executed
+
+### File Operations
+- Read existing files before making modifications
+- Preserve formatting and style consistency
+- Use appropriate tools for different operations
+- Verify changes after completion
+
+## Proactive Assistance
+
+### Anticipate Needs
+- Suggest related improvements when making changes
+- Identify potential issues before they occur
+- Recommend best practices relevant to the task
+- Provide comprehensive solutions, not just minimal fixes
+
+### Documentation
+- Create helpful README files for new projects
+- Document setup procedures and requirements
+- Include usage examples and common workflows
+- Maintain up-to-date project documentation
+
+---
+
+**Remember**: The primary goal is to provide helpful, accurate, and proactive assistance while communicating clearly in Korean and following software development best practices.
+
